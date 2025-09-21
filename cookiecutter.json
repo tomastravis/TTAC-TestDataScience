@@ -1,0 +1,17 @@
+{
+    "project_name": "TTAC-TestDataScience-1",
+    "project_slug": "TTAC-TestDataScience-1",
+    "package_name": "ttac_test_ds_classification",
+    "author_name": "Tomás Travis Alonso Cremnitz",
+    "author_initials": "TTAC",
+    "email": "tomasnataliaalbanes@gmail.com",
+    "description": "TEST 1 - Classification: Wine Quality Dataset with Random Forest, SVM, XGBoost",
+    "version": "0.1.0",
+    "python_version": "3.12",
+    "use_poetry": "y",
+    "use_pre_commit": "y",
+    "include_notebooks": "y",
+    "license": "MIT",
+    "test_framework": "pytest",
+    "_extensions": ["json"]
+}

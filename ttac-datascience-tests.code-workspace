@@ -1,0 +1,47 @@
+{
+    "folders": [
+        {
+            "name": "TTAC Data Science Tests",
+            "path": "."
+        }
+    ],
+    "settings": {
+        "git.enabled": true,
+        "git.autorefresh": true,
+        "python.defaultInterpreterPath": "./.venv/bin/python",
+        "python.terminal.activateEnvironment": true,
+        "python.linting.enabled": true,
+        "python.linting.flake8Enabled": true,
+        "python.linting.mypyEnabled": true,
+        "python.formatting.provider": "black",
+        "files.exclude": {
+            "**/.git": false,
+            "**/.DS_Store": true,
+            "**/node_modules": true,
+            "**/__pycache__": true,
+            "**/.pytest_cache": true,
+            "**/.mypy_cache": true,
+            "**/.ruff_cache": true
+        },
+        "search.exclude": {
+            "**/node_modules": true,
+            "**/bower_components": true,
+            "**/*.code-search": true,
+            "**/.venv": true,
+            "**/models/*.pkl": true,
+            "**/models/*.h5": true
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-python.python",
+            "ms-python.flake8", 
+            "ms-python.mypy-type-checker",
+            "charliermarsh.ruff",
+            "ms-toolsai.jupyter",
+            "ms-vscode.vscode-json",
+            "tamasfe.even-better-toml",
+            "redhat.vscode-yaml"
+        ]
+    }
+}

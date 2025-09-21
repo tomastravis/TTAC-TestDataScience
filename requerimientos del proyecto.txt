@@ -1,0 +1,40 @@
+El objetivo de estas pruebas es el de evaluar las capacidades, conocimientos y habilidades del candidato/a en materia de
+inteligencia artificial y ciencia de datos.
+• Todas las pruebas deberán ser resueltas utilizando Python como lenguaje de programación, en particular con una versión estable.
+• El candidato/a deberá poder garantizar la reproducibilidad del análisis realizado en cada prueba mediante la definición de
+dependencias a través de fichero requirements /poetry.
+• El candidato/a deberá seguir las reglas de estilo Python PEP8 así como utiliza analizadores de código para asegurar la calidad de
+este (código muerto, tipado de funciones, optimización de imports, complejidad ciclomática, etc.)
+• Los jupyter notebooks deberán estarán ordenados y documentados indicando claramente el orden de ejecución y la estructura de
+estos mediante celdas markdown con títulos y subtítulos.
+• Se recomienda exportar el jupyter notebook con el resultado embebido a formato html.
+• La estructura de los entregables deberá ser la de un repositorio de código tipo cookie cutter con un fichero readme.md indicando
+la función de cada módulo/script/fichero del entregable.
+• Se valorará de forma positiva la entrega de una presentación con el planteamiento del caso, resultados y conclusiones obtenidos o
+un informe en Latex/beamer (en ambos casos solo entregar el pdf generado).
+• Se valorará de forma positiva la creación de documentación con Mkdocs.
+• Las entregas se realizarán via email mediante un archivo comprimido (uno por cada prueba) cuyo nombre siga la nomenclatura:
+XYZ-TestDataScience-W.zip, donde XYZ son las iniciales del candidato/a y W es el número de de prueba.
+• Alternativamente se podrá realizar la entrega mediante un repositorio publico de Github aplicando la misma nomenclatura.
+
+TEST 1 – DATA SCIENCE - CLASIFICACIÓN
+• Escoger un dataset abierto de clasificación que no sea el de Iris (referenciar fuente)
+• En un Jupyter notebook realizar análisis exploratorio (EDA), incluyendo limpieza de datos, transformaciones,
+agragaciones y visualizaciones que se consideren oportunas.
+• Seleccionar, entrenar y testear el/los modelo/s que se consideren apropiados.
+• Justificar el modelo elegido en función métricas de rendimiento.
+• Elaborar conclusiones del ejercicio llevado acabo.
+• Preparar entregable con todos los ficheros necesarios para reproducir el análisis y poner en producción el modelo
+entrenado (integración DevOps).
+
+TEST 2 – TIME SERIES - REGRESSION
+• Escoger un dataset abierto de series temporales multivariante que no sea financiero y donde la variable a
+predecir no tenga estacionalidad (referenciar fuente).
+• Realizar comprobación de que la serie temporal es no- estacional
+• Seleccionar, entrenar y testear el/los modelo/s de machine learning/series temporales que permitan:
+o Predecir 100 periodos de tiempos en el futuro con la particularidad que a partir del instante donde se inicia la
+predicción no se dispone de los valores de las variables regresoras
+• Representar gráficamente los resultados y evaluar la bondad del modelo utilizando los KPIs adecuados
+• Elaborar conclusiones del ejercicio llevado acabo.
+• Preparar entregable con todos los ficheros necesarios para reproducir el análisis y poner en producción el/los
+modelo/s entrenado/s (integración DevOps).

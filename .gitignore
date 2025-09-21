@@ -1,0 +1,203 @@
+# Archivos compilados / optimizados / DLL
+__pycache__/
+*.py[cod]
+*# Jupyter Notebook
+.ipynb_checkpoints/
+*.htmly.class
+
+# Distribución / empaquetado
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Logs de instalación
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Reportes de tests unitarios / cobertura
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Traducciones
+*.mo
+*.pot
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Documentación Sphinx
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Archivo de programación celery beat
+celerybeat-schedule
+
+# Archivos parseados SageMath
+*.sage.py
+
+# Entornos virtuales
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Configuración de proyecto Spyder
+.spyderproject
+.spyproject
+
+# Configuración de proyecto Rope
+.ropeproject
+
+# Documentación mkdocs
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ruff cache
+.ruff_cache/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos generados por el SO
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# =============================================
+# ESPECÍFICO DEL PROYECTO - ML/Ciencia de Datos
+# =============================================
+
+# Modelos Entrenados (deben regenerarse via scripts de entrenamiento)
+*.pkl
+*.joblib
+*.h5
+*.model
+*.bin
+
+# Artefactos de modelos y objetos serializados
+**/models/*.pkl
+**/models/*.h5
+**/models/*.joblib
+**/models/*.bin
+**/models/*.model
+
+# Mantener solo metadatos y configuración de modelos
+!**/models/*.json
+!**/models/*.yaml
+!**/models/*.yml
+!**/models/*.md
+!**/models/.gitkeep
+
+# Datasets grandes (deben descargarse via scripts)
+**/data/raw/*.csv
+**/data/raw/*.tsv
+**/data/raw/*.xlsx
+**/data/raw/*.json
+**/data/raw/*.parquet
+
+# Datos procesados (deben regenerarse via scripts de procesamiento)
+**/data/processed/*.csv
+**/data/processed/*.tsv
+**/data/processed/*.xlsx
+**/data/processed/*.json
+**/data/processed/*.parquet
+
+# Datos finales de salida (deben regenerarse)
+**/data/final/*.csv
+**/data/final/*.tsv
+**/data/final/*.xlsx
+**/data/final/*.json
+**/data/final/*.parquet
+
+# Mantener estructura de datos y documentación
+!**/data/**/.gitkeep
+!**/data/**/README.md
+!**/data/**/*.md
+
+# Salidas de experimentos y logs
+training.log
+experiments/
+wandb/
+mlruns/
+.mlflow/
+outputs/
+multirun/
+
+# Archivos temporales con timestamps
+*_20*.pkl
+*_20*.h5
+*_20*.json
+*_20*.csv
+
+# Archivos grandes que deben descargarse
+*.zip
+*.tar.gz
+*.rar
+
+# Configuraciones específicas de proyectos
+**/notebooks/*
+!**/notebooks/*.ipynb
+!**/notebooks/README.md
+
+# Datos específicos ignorados por proyectos individuales
+**/data/*/*
+!**/data/*/.gitkeep
+!**/data/*/README.md

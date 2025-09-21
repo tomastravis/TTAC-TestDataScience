@@ -1,0 +1,41 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Data files (se descargan automáticamente)
+*.csv
+*.json
+*.pkl
+
+# Model files (se generan en notebooks)
+*.joblib
+*.model
+models/*.pkl
+models/*.json
+
+# Log files
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+.env
+.venv
+venv/
+env/
+
+# Cache directories
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/

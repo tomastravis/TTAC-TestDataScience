@@ -1,0 +1,24 @@
+# Dependencias principales para Data Science - Time Series
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+jupyter>=1.0.0
+
+# Específicas para Time Series Forecasting
+statsmodels>=0.14.0    # Para modelos ARIMA
+tensorflow>=2.13.0     # Para redes LSTM
+prophet>=1.1.4         # Para forecasting de Facebook
+yfinance>=0.2.18       # Para datos de stocks
+requests>=2.31.0       # Para APIs (CoinGecko, etc.)
+
+# Procesamiento y análisis
+scipy>=1.11.0
+plotly>=5.15.0         # Para gráficos interactivos
+
+# Utilidades
+click>=8.1.0
+python-dotenv>=1.0.0
+joblib>=1.3.0
+tqdm>=4.65.0

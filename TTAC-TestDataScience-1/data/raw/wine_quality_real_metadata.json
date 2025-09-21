@@ -1,0 +1,13 @@
+{
+  "source": "UCI Machine Learning Repository",
+  "url": "https://archive.ics.uci.edu/dataset/186/wine+quality",
+  "red_wine_samples": 1599,
+  "white_wine_samples": 4898,
+  "total_samples": 6497,
+  "features": 11,
+  "quality_range": [
+    3,
+    9
+  ],
+  "citation": "P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, Elsevier, 47(4):547-553, 2009."
+}

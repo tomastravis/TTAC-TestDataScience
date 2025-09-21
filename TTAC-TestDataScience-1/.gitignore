@@ -1,0 +1,111 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb.backup
+
+# pyenv
+.python-version
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Environments
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Machine Learning
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.model
+models/*.pkl
+models/*.joblib
+
+# Modelos y resultados entrenados (se regeneran con scripts)
+models/*.csv
+models/random_forest_model_*.csv
+models/model_comparison_results.csv
+
+# Mantener solo metadatos y configuración
+!models/*.json
+!models/*.yaml
+!models/*.md
+
+# Data files (uncomment if you don't want to track data)
+# data/raw/*
+# data/processed/*
+# data/external/*
+
+# EXCEPCIÓN: Incluir dataset UCI Wine Quality (pequeño, esencial para reproducibilidad)
+!data/raw/wine_quality_real.csv
+!data/raw/wine_quality_real_metadata.json
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# Cache directories
+.ruff_cache/
+.pytest_cache/
