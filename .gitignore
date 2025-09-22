@@ -125,6 +125,12 @@ Thumbs.db
 # ESPECÍFICO DEL PROYECTO - ML/Ciencia de Datos
 # =============================================
 
+# EXCEPCIONES PARA TTAC-TestDataScience-2 (TEST 2 - UCI ML Repository)
+# Permitir datasets oficiales del UCI ML Repository para cumplimiento TEST 2
+!TTAC-TestDataScience-2/data/raw/gas_sensor_drift.zip
+!TTAC-TestDataScience-2/data/raw/Dataset/*.dat
+!TTAC-TestDataScience-2/data/raw/process_gas_sensor_data.py
+
 # Modelos Entrenados (deben regenerarse via scripts de entrenamiento)
 *.pkl
 *.joblib
