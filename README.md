@@ -31,14 +31,14 @@ cd TTAC-TestDataScience-2 && pip install -r requirements.txt && cd ..
 
 ### 3. Usar el Proyecto
 ```bash
-# Ver documentación completa
-mkdocs serve  # → http://127.0.0.1:8000
+# Servir documentación localmente con MkDocs
+mkdocs serve  # Abre http://127.0.0.1:8000
 
 # O ejecutar notebooks directamente
 jupyter notebook
 ```
 
-**📖 Documentación completa**: https://tomastravis.github.io/TTAC-TestDataScience/
+Documentación pública hospedada en GitHub Pages deshabilitada. Sirve la documentación en local con `mkdocs serve`.
 
 ---
 
@@ -53,4 +53,4 @@ TTAC-TestDataScience/
 └── requirements-docs.txt         # Dependencias MkDocs
 ```
 
-**Para información detallada, instalación paso a paso y uso avanzado consulta la [documentación completa](https://tomastravis.github.io/TTAC-TestDataScience/).**
+Para información detallada, instalación paso a paso y uso avanzado consulta la documentación local en http://127.0.0.1:8000 tras ejecutar `mkdocs serve`.

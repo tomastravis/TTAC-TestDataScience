@@ -1,7 +1,6 @@
 site_name: TTAC Data Science Tests
 site_description: Documentation for Machine Learning and Time Series projects using UCI datasets
 site_author: Tomás Travis Alonso Cremnitz
-site_url: https://tomastravis.github.io/TTAC-TestDataScience/
 
 theme:
   name: material

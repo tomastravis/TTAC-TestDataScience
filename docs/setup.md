@@ -372,10 +372,10 @@ jobs:
 ## Soporte y Documentación
 
 ### Recursos Adicionales
-- **Documentación completa**: [GitHub Pages](https://tomastravis.github.io/TTAC-TestDataScience/)
-- **Notebooks interactivos**: Disponibles en `notebooks/`
-- **API Reference**: Documentación automática con MkDocstrings
-- **Issues**: [GitHub Issues](https://github.com/tomastravis/TTAC-TestDataScience/issues)
+- Documentación en local: ejecutar `mkdocs serve` desde la raíz y abrir http://127.0.0.1:8000
+- Notebooks interactivos: Disponibles en `notebooks/`
+- API Reference: Documentación automática con MkDocstrings
+- Issues: https://github.com/tomastravis/TTAC-TestDataScience/issues
 
 ### Contacto
 - **Autor**: Tomás Travis Alonso Cremnitz
