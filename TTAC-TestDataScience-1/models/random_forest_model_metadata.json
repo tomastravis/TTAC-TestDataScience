@@ -1,7 +1,7 @@
 {
   "best_model": "Random Forest",
   "best_f1_score": 0.683,
-  "training_date": "2025-09-21T17:32:25.787975",
+  "training_date": "2025-09-22T21:23:53.617272",
   "features_used": [
     "fixed acidity",
     "volatile acidity",

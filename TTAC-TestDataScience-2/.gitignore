@@ -7,9 +7,18 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Data files (se descargan automáticamente)
-*.csv
-*.json
+data/raw/*.csv
+data/raw/*.zip
+data/raw/Dataset/
+data/processed/*.csv
+
+# Generated model metadata files
+models/*.json
+models/*.pkl
 *.pkl
+
+# Exclude specific data files but keep scripts
+!data/raw/process_gas_sensor_data.py
 
 # Model files (se generan en notebooks)
 *.joblib

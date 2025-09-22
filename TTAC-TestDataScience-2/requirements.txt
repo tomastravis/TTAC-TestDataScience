@@ -10,12 +10,14 @@ jupyter>=1.0.0
 statsmodels>=0.14.0    # Para modelos ARIMA
 tensorflow>=2.13.0     # Para redes LSTM
 prophet>=1.1.4         # Para forecasting de Facebook
-yfinance>=0.2.18       # Para datos de stocks
-requests>=2.31.0       # Para APIs (CoinGecko, etc.)
 
 # Procesamiento y análisis
 scipy>=1.11.0
 plotly>=5.15.0         # Para gráficos interactivos
+
+# Testing y calidad de código
+pytest>=7.0.0
+pytest-cov>=4.0.0
 
 # Utilidades
 click>=8.1.0

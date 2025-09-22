@@ -1,0 +1,72 @@
+site_name: TTAC Data Science Tests
+site_description: Documentation for Machine Learning and Time Series projects using UCI datasets
+site_author: Tomás Travis Alonso Cremnitz
+site_url: https://tomastravis.github.io/TTAC-TestDataScience/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: 
+            - TTAC-TestDataScience-1/src
+            - TTAC-TestDataScience-2/src
+          options:
+            docstring_style: google
+            show_source: false
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - "TEST 1: Wine Classification":
+      - Overview: test1/index.md
+      - Dataset & EDA: test1/dataset.md
+      - Models & Results: test1/models.md
+      - API Reference: test1/api.md
+  - "TEST 2: Time Series":
+      - Overview: test2/index.md
+      - Dataset & Analysis: test2/dataset.md
+      - Forecasting Models: test2/models.md
+      - API Reference: test2/api.md
+  - Setup & Usage: setup.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/tomastravis/TTAC-TestDataScience

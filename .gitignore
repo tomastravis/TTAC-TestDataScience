@@ -195,6 +195,7 @@ multirun/
 # Configuraciones específicas de proyectos
 **/notebooks/*
 !**/notebooks/*.ipynb
+!**/notebooks/*.html
 !**/notebooks/README.md
 
 # Datos específicos ignorados por proyectos individuales

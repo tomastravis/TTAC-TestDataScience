@@ -12,10 +12,10 @@ Sistema completo y profesional de **forecasting de series temporales** que imple
 ## Características Principales
 
 ### **Fuentes de Datos**
-- **Air Quality UCI**: Dataset de calidad del aire (9,358 registros horarios)
-- **Stocks**: Yahoo Finance para datos bursátiles (desarrollo)
-- **Clima**: Datos meteorológicos con patrones estacionales
-- **Sintéticos**: Generadores automáticos para testing y validación
+- **Gas Sensor Array Drift UCI**: Dataset de degradación de sensores (144 registros semanales)
+- **DOI: 10.24432/C5JG8V**: Fuente verificable del UCI ML Repository  
+- **16 sensores químicos**: Datos reales de laboratorio (2008-2010)
+- **Variable objetivo**: sensor_drift (proceso AR(1) no estacional)
 
 ### **Modelos Implementados**
 - **ARIMA/SARIMA**: Para series estacionarias (Air Quality CO: **21.84% MAPE**)
@@ -46,18 +46,57 @@ TTAC-TestDataScience-2/
 │   ├── forecast.py        # Script CLI de predicción
 │   └── utils.py           # Utilidades y helpers
 ├── notebooks/
-│   ├── 01_eda_timeseries.ipynb        # EDA completo con tests de estacionariedad
+│   ├── 01_eda_timeseries.ipynb        # EDA completo con datos reales UCI
 │   └── 02_modeling_forecasting.ipynb  # Modelado comparativo avanzado
-├── tests/              # Tests unitarios con pytest (19/36 passing)
+├── tests/              # Tests unitarios con pytest
 │   ├── test_models.py  # Tests de modelos de forecasting
 │   └── test_data.py    # Tests de pipeline de datos
 ├── data/
-│   ├── raw/            # Datos originales (Bitcoin, stocks, clima)
-│   ├── processed/      # Datos limpios y con feature engineering
-│   └── final/          # Datos listos para modelos
+│   ├── raw/            # Datos originales UCI ML Repository
+│   │   ├── Dataset/    # Archivos .dat originales (10 batches)
+│   │   ├── gas_sensor_drift.zip        # Dataset comprimido (9.5MB)
+│   │   └── process_*.py                # Scripts de procesamiento
+│   └── processed/      # Datos procesados listos para análisis
+│       └── gas_sensor_drift_timeseries.csv  # Serie temporal (144 registros)
 ├── models/             # Modelos entrenados (.pkl, .h5, metadata)
 ├── config/             # Configuraciones YAML (Hydra)
 └── requirements.txt    # Dependencias de producción
+```
+
+## Procesamiento de Datos
+
+### **Pipeline de Transformación**
+
+El proyecto incluye un proceso completo de transformación de datos desde archivos originales del UCI ML Repository:
+
+```bash
+# Estructura de procesamiento
+data/
+├── raw/                    # Datos originales (no modificar)
+│   ├── Dataset/           # 10 archivos batch*.dat del UCI
+│   ├── gas_sensor_drift.zip        # Dataset original (9.5MB)
+│   └── process_gas_sensor_data_fixed.py  # Script de procesamiento
+└── processed/             # Datos listos para análisis
+    └── gas_sensor_drift_timeseries.csv   # Serie temporal (144 registros)
+```
+
+### **Proceso de Transformación**
+
+1. **Descarga**: Dataset oficial del UCI ML Repository (DOI: 10.24432/C5JG8V)
+2. **Extracción**: 10 archivos batch*.dat (222,560 registros originales)
+3. **Procesamiento**: Conversión a serie temporal con `process_gas_sensor_data.py`
+4. **Resultado**: 144 registros semanales (2008-2010) con 16 sensores + drift
+5. **Ubicación**: `data/processed/gas_sensor_drift_timeseries.csv`
+
+### **Validación del Procesamiento**
+
+```python
+# Verificar datos procesados desde notebook
+import pandas as pd
+df = pd.read_csv('../data/processed/gas_sensor_drift_timeseries.csv')
+print(f"Registros: {len(df)}")
+print(f"Período: {df['datetime'].min()} - {df['datetime'].max()}")
+print(f"Variables: {list(df.columns)}")
 ```
 
 ## Instalación Rápida
@@ -80,26 +119,26 @@ pip install -r requirements.txt
 
 ### 1. **Entrenamiento de Modelos**
 ```bash
-# ARIMA para Air Quality UCI (Compliance con TEST 2)
-python src/train_model.py --model arima --data air_quality --target "CO(GT)" --horizon 100
+# ARIMA para Gas Sensor Array Drift UCI (Compliance con TEST 2)
+python src/train_model.py --model arima --data gas_sensor --target "sensor_drift" --horizon 100
 
-# Todos los modelos para Air Quality
-python src/train_model.py --model all --data air_quality --horizon 100
+# Todos los modelos para Gas Sensor Array Drift
+python src/train_model.py --model all --data gas_sensor --horizon 100
 
 # LSTM personalizado para forecasting
-python src/train_model.py --model lstm --data air_quality --sequence_length 100 --epochs 100
+python src/train_model.py --model lstm --data gas_sensor --sequence_length 100 --epochs 100
 ```
 
 ### 2. **Forecasting y Predicción (100 períodos)**
 ```bash
 # Predicción de 100 períodos con ARIMA
-python src/forecast.py --model models/air_quality_arima_model.pkl --steps 100
+python src/forecast.py --model models/gas_sensor_arima_model.pkl --steps 100
 
 # Con visualización y export
-python src/forecast.py --model models/air_quality_prophet_model.pkl --steps 100 --plot --output forecast.csv
+python src/forecast.py --model models/gas_sensor_prophet_model.pkl --steps 100 --plot --output forecast.csv
 
 # Forecasting con intervalos de confianza
-python src/forecast.py --model models/air_quality_arima_model.pkl --steps 100 --confidence 0.95
+python src/forecast.py --model models/gas_sensor_arima_model.pkl --steps 100 --confidence 0.95
 ```
 
 ### 3. **Análisis en Notebooks Jupyter**

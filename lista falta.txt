@@ -1,0 +1,7 @@
+html de los notebokos -> hecho
+presentacion beamer latex -> https://www.overleaf.com/project/68d180299180c4ee1d55f008
+documentacion mkdocs -> listo
+mover el archivo gas_sensor_drift_timeseries.csv a una carpeta processed ->
+quitar los archivos "%fixed" -> 
+ver que test 1 tengamos una limpieza de datos
+simplificar 01_eda_timeseries
