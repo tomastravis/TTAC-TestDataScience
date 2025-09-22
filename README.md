@@ -68,56 +68,18 @@ TTAC-TestDataScience/
 ├── docs/                         # Documentación MkDocs completa
 ├── TTAC-TestDataScience-1/       # TEST 1: Wine Quality Classification
 │   ├── notebooks/
-│   │   ├── 01_eda_classification.ipynb     # 🎯 CORE - EDA Análisis
+│   │   ├── 01_eda_classification.ipynb     # CORE - EDA Análisis
 │   │   ├── 01_eda_classification.html      # HTML embebido
-│   │   ├── 02_modeling_classification.ipynb # 🎯 CORE - Modelado
+│   │   ├── 02_modeling_classification.ipynb # CORE - Modelado
 │   │   └── 02_modeling_classification.html # HTML embebido
 │   └── ...
 ├── TTAC-TestDataScience-2/       # TEST 2: Gas Sensor Forecasting  
 │   ├── notebooks/
-│   │   ├── 01_eda_timeseries.ipynb         # 🎯 CORE - EDA Temporal
+│   │   ├── 01_eda_timeseries.ipynb         # CORE - EDA Temporal
 │   │   ├── 01_eda_timeseries.html          # HTML embebido
-│   │   ├── 02_modeling_forecasting.ipynb   # 🎯 CORE - Forecasting
+│   │   ├── 02_modeling_forecasting.ipynb   # CORE - Forecasting
 │   │   └── 02_modeling_forecasting.html    # HTML embebido
 │   └── ...
 ├── mkdocs.yml                    # Configuración documentación
 └── requirements-docs.txt         # Dependencias MkDocs
-```
-
-## 🎯 Notebooks Principales (CORE del Proyecto)
-
-Los **4 notebooks principales** que demuestran todo el flujo de trabajo:
-
-1. **TEST 1 - Clasificación**: `TTAC-TestDataScience-1/notebooks/`
-   - `01_eda_classification.ipynb` - EDA completo Wine Quality
-   - `02_modeling_classification.ipynb` - Random Forest, SVM, XGBoost
-
-2. **TEST 2 - Series Temporales**: `TTAC-TestDataScience-2/notebooks/`  
-   - `01_eda_timeseries.ipynb` - EDA Gas Sensor Array Drift
-   - `02_modeling_forecasting.ipynb` - Random Forest, XGBoost, ARIMA
-
-Cada notebook también está disponible como **HTML embebido** para visualización sin Jupyter.
-
----
-
-## 🚀 Inicio Rápido - Solo 2 Pasos
-
-1. **Instalar dependencias**:
-   ```bash
-   pip install -r requirements-docs.txt
-   cd TTAC-TestDataScience-1 && pip install -r requirements.txt && cd ..
-   cd TTAC-TestDataScience-2 && pip install -r requirements.txt && cd ..
-   ```
-
-2. **Ejecutar notebooks**:
-   ```bash
-   jupyter notebook
-   # Navegar a las carpetas notebooks/ y ejecutar los .ipynb
-   ```
-
-## 📚 Documentación Opcional
-
-Para documentación técnica completa (opcional):
-```bash
-mkdocs serve  # http://127.0.0.1:8000
 ```
